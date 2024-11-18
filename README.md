@@ -16,4 +16,5 @@ Technologies used:
   <li>Nginx</li>
   <li>Gunicorn</li>
   <li>GitHub actions</li>
+  <li>YAML</li>
 </ul>
