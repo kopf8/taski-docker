@@ -6,11 +6,13 @@ services:
   db:
     image: postgres:13
     env_file: .env
+    restart: always
     volumes:
       - pg_data_production:/var/lib/postgresql/data
   backend:
     image: kopf8/taski_backend
     env_file: .env
+    restart: always
     volumes:
       - static_volume:/backend_static
   frontend:
@@ -22,6 +24,7 @@ services:
   gateway:
     image: kopf8/taski_gateway
     env_file: .env
+    restart: always
     volumes:
       - static_volume:/staticfiles/
     ports:
